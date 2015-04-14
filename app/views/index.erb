@@ -1,1 +1,9 @@
-<h1>Home Page</h1>
+<% if @visitor_name %>
+    <h1>Hello, <%= @visitor_name %>!</h1>
+<% else %>
+    <h1>Hello, new person!</h1>
+<% end %>
+
+<form action="/users" method="post">
+    <p></p>
+</form>

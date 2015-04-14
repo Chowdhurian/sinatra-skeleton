@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Profile</title>
+        <link type="text/css" rel="stylesheet" href="public/stylesheets/course_project.css"
+    </head>
+    <body>
+        <% @users.each do |user| %>
+            <p><%= user.email %></p>
+        <% end %>
+        <fieldset>
+            <legend>Profile</legend>
+            <form action="/profile/edit" method="post">
+                <p>
+                    <label for="email-field">Email</label>
+                    <input type="text" name="email" id="email-field" placeholder="Your email goes here">
+                </p>
+                <p>
+                    <label for="password-field">Password</label>
+                    <input type="password" name="password" id="password-field">
+                </p>
+                <p>
+                    <p>Gender</p>
+                    <input type="radio" name="gender" value="male" id="male-field">
+                    <label for="male-field">Male</label>
+                    <br>
+                    <input type="radio" name="gender" value="female" id="female-field">
+                    <label for="female-field">Female</label>
+                </p>
+                <p>
+                    <label for="firstname-field">First Name</label>
+                    <input type="text" name="firstname" id="firstname-field">
+                </p>
+                <p>
+                    <label for="lastname-field">Last Name</label>
+                    <input type="text" name="lastname" id="lastname-field">
+                </p>
+            </form>
+        </fieldset>
+    </body>
+</html>

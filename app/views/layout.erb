@@ -7,6 +7,15 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- End of copied code -->
   <!--
     application.css is where you put your styles
   -->
@@ -17,7 +26,12 @@
 
   <title></title>
 </head>
-<body>
-  <%= yield %>
-</body>
+    <body>
+            <ul class="nav nav-pills text-center">
+                <li role="presentation"><a href="/login">Login</a></li>
+                <li role="presentation"><a href="/profile">Profile</a></li>
+                <li role="presentation"><a href="/login">Signup</a></li>
+            </ul>
+      <%= yield %>
+    </body>
 </html>

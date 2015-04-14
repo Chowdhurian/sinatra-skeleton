@@ -1,0 +1,46 @@
+button {
+    border-bottom-right-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type=password]:hover {
+    background-color: palegreen
+}
+
+input[type=text]:hover {
+    background-color: palegreen;
+}
+
+label {
+
+}
+
+legend {
+    text-align: center;
+}
+
+#login {
+
+}
+
+#signup {
+
+}
+
+.formbox {
+    border: 8px solid palegreen;
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.btn.btn-submit {
+    background-color: seagreen;
+}
+
+.btn.btn-submit:hover {
+    background-color: palegreen;
+}
