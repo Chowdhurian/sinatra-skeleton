@@ -11,6 +11,10 @@ gem 'sinatra-activerecord'
 gem 'puma'
 gem 'tux'
 
+#new
+gem 'rack-flash3'
+#
+
 group :development, :test do
   gem 'pry'
   gem 'shotgun'

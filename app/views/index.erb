@@ -1,9 +1,6 @@
-<% if @visitor_name %>
-    <h1>Hello, <%= @visitor_name %>!</h1>
+<% if current_user %>
+    <%= flash[:notice] %>
+    <h1>Hello, <%= current_user.username %>!</h1>
 <% else %>
     <h1>Hello, new person!</h1>
 <% end %>
-
-<form action="/users" method="post">
-    <p></p>
-</form>

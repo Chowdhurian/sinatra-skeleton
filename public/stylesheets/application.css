@@ -14,20 +14,9 @@ input[type=text]:hover {
     background-color: palegreen;
 }
 
-label {
-
-}
 
 legend {
     text-align: center;
-}
-
-#login {
-
-}
-
-#signup {
-
 }
 
 .formbox {
@@ -43,4 +32,24 @@ legend {
 
 .btn.btn-submit:hover {
     background-color: palegreen;
+}
+
+.centered-pills {
+    text-align: center
+}
+
+.centered-pills a {
+    float: left
+}
+
+.centered-pills li {
+    display: inline}
+
+.centered-pills ul.nav-pills {
+    display: inline-block
+}
+
+#cookie img {
+    width:50px;
+    height:50px;
 }

@@ -23,7 +23,7 @@ class CreateTables < ActiveRecord::Migration
         end
         
         create_table :ratings do |t|
-            t.integer :content #out of 100
+            t.integer :content #change to binary, like/not like, good/bad
         end
         
 #        create_table :people do |t|

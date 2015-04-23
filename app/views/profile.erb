@@ -1,25 +1,46 @@
 <!DOCTYPE HTML>
 
 <html>
-    <head>
-        <title>Profile</title>
-        <link type="text/css" rel="stylesheet" href="public/stylesheets/course_project.css"
-    </head>
     <body>
-        <% @users.each do |user| %>
-            <p><%= user.email %></p>
-        <% end %>
-        <fieldset>
-            <legend>Profile</legend>
+        <div class="row" id="signup">
+            <div class="col-md-4 col-sm-offset-4">
+                <div class="formbox">
+                    <h1>Profile</h1>
+                    <form action="/profile/edit" method="post" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="username-field" class="control-label col-sm-4">
+                                <p>Username</p>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" name="username" id="username-field" class="form-control" value="<%= @current_user.username %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-field" class="control-label col-sm-4">
+                                <p>Email</p>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" name="email" id="email-field" class="form-control" value="<%= @current_user.email %>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-field" class="control-label col-sm-4">
+                                <p>Password</p>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="password" name="password" id="password-field" class="form-control" placeholder="enter new password here">
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!--        <fieldset>
             <form action="/profile/edit" method="post">
-                <p>
-                    <label for="email-field">Email</label>
-                    <input type="text" name="email" id="email-field" placeholder="Your email goes here">
-                </p>
-                <p>
-                    <label for="password-field">Password</label>
-                    <input type="password" name="password" id="password-field">
-                </p>
                 <p>
                     <p>Gender</p>
                     <input type="radio" name="gender" value="male" id="male-field">
@@ -38,5 +59,6 @@
                 </p>
             </form>
         </fieldset>
+-->
     </body>
 </html>

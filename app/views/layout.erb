@@ -27,11 +27,36 @@
   <title></title>
 </head>
     <body>
-            <ul class="nav nav-pills text-center">
-                <li role="presentation"><a href="/login">Login</a></li>
-                <li role="presentation"><a href="/profile">Profile</a></li>
-                <li role="presentation"><a href="/login">Signup</a></li>
-            </ul>
+        <div class="row">
+            <div class="centered-pills">
+                <ul class="nav nav-pills centered-pills">
+                    <li id="cookie"><img src="/images/cookie.jpg"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="centered-pills">
+                <ul class="nav nav-pills centered-pills">
+                    <li>Movie Monster</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="centered-pills">
+                <ul class="nav nav-pills centered-pills">
+                    <% if current_user %>
+                        <li role="presentation"><a href="/videos/my">My Videos</a></li>
+                        <li role="presentation"><a href="/videos">Everyone's Videos</a></li>
+                        <li role="presentation"><a href="/profile/edit">Profile</a></li>
+                        <li role="presentation"><a href="/logout">Logout</a></li>
+                    <% else %>
+                        <li role="presentation"><a href="/signup">Signup</a></li>
+                        <li role="presentation"><a href="/login">Login</a></li>
+                        <li role="presentation"><a href="/all_videos">All Videos</a></li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
       <%= yield %>
     </body>
 </html>
